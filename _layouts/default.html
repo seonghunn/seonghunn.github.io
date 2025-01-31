@@ -38,7 +38,10 @@
                 I am an undergraduate student at Yonsei University, majoring in Electrical and Electronics Engineering.
               </p>
               <p>
-                During my undergraduate studies, I had the privilege of working as a research intern at the University of California, San Diego, under <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a>, and at Seoul National University, under <a href="https://3d.snu.ac.kr/">Young-Min Kim</a>. My research interests lie in 3D Computer Vision and Computer Graphics.
+                During my undergraduate studies, I had the privilege of working as a research intern at the University of California, San Diego, under <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a>, and at Seoul National University, under <a href="https://3d.snu.ac.kr/">Young-Min Kim</a>.
+              </p>
+              <p>
+                My research interests lie in 3D Computer Vision and Computer Graphics.
               </p>
               <p style="text-align:center">
                 <a href="mailto:rendell@yonsei.ac.kr">Email</a> &nbsp;/&nbsp;
@@ -68,10 +71,13 @@
               {{post.authors}}
 
               <br>
-              <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
+              <em>{{post.venue}}</em>
               <br>
-              {% if post.arxiv %}
-              <a href="{{post.arxiv}}">arxiv</a> /
+              {% if post.paper %}
+              <a href="{{post.paper}}">paper</a> /
+              {% endif %}
+              {% if post.website %}
+              <a href="{{post.website}}">project page</a> /
               {% endif %}
               {% if post.video %}
               <a href="{{post.video}}">video</a> /
@@ -85,9 +91,6 @@
               {% if post.slides %}
               <a href="{{post.slides}}">slides</a> /
               {% endif %}
-              {% if post.website %}
-              <a href="{{post.website}}">website</a> /
-              {% endif %}
               {% if post.youtube %}
               <a href="{{post.youtube}}">youtube</a> /
               {% endif %}
@@ -100,11 +103,12 @@
           {% endfor %}
         </table>
 
-        <h2>Education</h2>
+        <h2 style="margin-top: 40px;">Education</h2>
+        <br>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="images/yonsei.png" alt="Yonsei University Logo" style="width:auto; height:auto; max-width:100%;" />
+              <img src="images/yonsei.png" alt="Yonsei University Logo" style="width:auto; height:auto; max-width:80px;" />
             </td>
             <td style="padding:2.5%;width:75%;vertical-align:middle">
               <h3>Yonsei University</h3>
@@ -112,15 +116,16 @@
               <p>2020.03 – Present</p>
             </td>
           </tr>
-          <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-            <img src="images/ucsd.png" alt="UCSD Logo" style="width:auto; height:auto; max-width:100%;" />
-          </td>
-          <td style="padding:2.5%;width:75%;vertical-align:middle">
-            <h3>University of California, San Diego</h3>
-            <p>Exchange student, Computer Science</p>
-            <p>2022.09 – 2023.06</p>
-          </td>
-        </tr>
+          <tr>
+            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              <img src="images/ucsd.png" alt="UCSD Logo" style="width:auto; height:auto; max-width:80px;" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>University of California, San Diego</h3>
+              <p>Exchange student, Computer Science</p>
+              <p>2022.09 – 2023.06</p>
+            </td>
+          </tr>
         </table>
 
 
