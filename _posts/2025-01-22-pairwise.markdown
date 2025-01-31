@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "PaMO: Parallel Mesh Optimization for Intersection-Free Low-Poly Modeling on the GPU"
+date:   2025-01-23 00:00:00 +00:00
+image: /images/pamo.jpg
+categories: research
+authors: "<strong>Seonghun Oh*</strong>, Xiaodi Yuan*, Xinyue Wei*, Ruoxi Shi, Fanbo Xiang, Minghua Liu, Hao Su"
+venue: "Under Review"
+paper: https://openreview.net/forum?id=xBuURiCChw&noteId=9xJprrhplv
+website: https://heo0224.github.io/IRMF_projectpage/
+---
