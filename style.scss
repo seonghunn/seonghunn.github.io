@@ -23,6 +23,18 @@ a:hover {
   text-decoration: none;
 }
 
+/* Subtle links that look like plain text, but change color on hover */
+.subtle-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.subtle-link:focus,
+.subtle-link:hover {
+  color: #1772d0;
+  text-decoration: none;
+}
+
 body,
 td,
 th,
