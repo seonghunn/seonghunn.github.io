@@ -5,8 +5,8 @@ date:   2025-01-23 00:00:00 +00:00
 image: /images/pamo.jpg
 categories: research
 authors: "<strong>Seonghun Oh*</strong>, Xiaodi Yuan*, Xinyue Wei*, Ruoxi Shi, Fanbo Xiang, Minghua Liu, Hao Su"
-venue: "Computer Graphics Forum (Proceeding of Pacific Graphics) 2025"
-#paper: https://openreview.net/forum?id=xBuURiCChw&noteId=9xJprrhplv
+venue: "Computer Graphics Forum (Pacific Graphics) 2025"
+paper: https://arxiv.org/abs/2509.05595
 website: https://seonghunn.github.io/pamo/
 code: https://github.com/SarahWeiii/pamo
 ---
