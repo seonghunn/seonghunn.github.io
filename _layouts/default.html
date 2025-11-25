@@ -11,16 +11,73 @@
 
     gtag('config', 'G-E00L9PT3V9');
   </script>
+  {% assign page_title = site.name %}
+  {% assign page_url = page.url | replace: 'index.html','' | prepend: site.baseurl | prepend: site.url %}
+  {% assign raw_description = page.description | default: page.excerpt | default: site.description %}
+  {% assign meta_description = raw_description | strip_html | strip_newlines | truncate: 155 %}
+  {% if page.image %}
+    {% assign social_image = page.image %}
+  {% else %}
+    {% assign social_image = site.avatar %}
+  {% endif %}
+  {% if social_image contains 'http' %}
+    {% assign social_image_url = social_image %}
+  {% else %}
+    {% assign social_image_url = social_image | prepend: site.baseurl | prepend: site.url %}
+  {% endif %}
   <title>{{ site.name }}</title>
 
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 
   <meta name="author" content="{{ site.name }}" />
+  {% if meta_description %}
+  <meta name="description" content="{{ meta_description }}">
+  {% endif %}
+  {% if page.keywords %}
+    {% assign keywords_content = page.keywords %}
+  {% elsif site.keywords %}
+    {% assign keywords_content = site.keywords | join: ', ' %}
+  {% endif %}
+  {% if keywords_content %}
+  <meta name="keywords" content="{{ keywords_content }}">
+  {% endif %}
+  <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if site.google_site_verification %}
+  <meta name="google-site-verification" content="{{ site.google_site_verification }}">
+  {% endif %}
+
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ meta_description }}">
+  <meta property="og:url" content="{{ page_url }}">
+  <meta property="og:image" content="{{ social_image_url }}">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page_title }}">
+  <meta name="twitter:description" content="{{ meta_description }}">
+  <meta name="twitter:image" content="{{ social_image_url }}">
 
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="canonical" href="{{ page_url }}">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ site.name }}",
+    "url": "{{ site.url }}",
+    "image": "{{ site.url }}/{{ site.avatar }}",
+    "email": "{{ site.email }}",
+    "description": "{{ meta_description }}",
+    "jobTitle": "Undergraduate Student",
+    "affiliation": "Yonsei University",
+    "sameAs": [{% for profile in site.social_links %}{% if forloop.first == false %}, {% endif %}"{{ profile.url }}"{% endfor %}]
+  }
+  </script>
 
 </head>
 
@@ -38,13 +95,11 @@
                 I am an undergraduate student at Yonsei University, majoring in Electrical and Electronics Engineering.
               </p>
               <p>
-                I am currently a research intern at NAVER AI Lab. During my undergraduate studies, I worked as a research intern at UC San Diego and Seoul National University.
-              </p>
-              <p>
+                During my undergraduate studies, I worked as a research intern at UC San Diego, Seoul National University, and NAVER AI Lab.
                 My research interests lie in 3D Computer Vision and Computer Graphics.
               </p>
               <p><b>
-                I am looking for PhD positions starting in Fall 2026, as well as research internship opportunities beginning in 2026.
+                I am looking for research internship opportunities beginning in 2026.
               </b><br>Feel free to contact me!</p>
               <p style="text-align:center">
                 <a href="mailto:rendell@yonsei.ac.kr">Email</a> &nbsp;/&nbsp;
@@ -76,27 +131,36 @@
               <br>
               <em>{{post.venue}}</em>
               <br>
+              {% assign link_list = "" %}
               {% if post.website %}
-              <a href="{{post.website}}">project page</a> /
+                {% if link_list != "" %}{% assign link_list = link_list | append: " / " %}{% endif %}
+                {% assign link_list = link_list | append: '<a href="' | append: post.website | append: '">project page</a>' %}
               {% endif %}
               {% if post.paper %}
-              <a href="{{post.paper}}">paper</a> /
+                {% if link_list != "" %}{% assign link_list = link_list | append: " / " %}{% endif %}
+                {% assign link_list = link_list | append: '<a href="' | append: post.paper | append: '">paper</a>' %}
               {% endif %}
               {% if post.video %}
-              <a href="{{post.video}}">video</a> /
+                {% if link_list != "" %}{% assign link_list = link_list | append: " / " %}{% endif %}
+                {% assign link_list = link_list | append: '<a href="' | append: post.video | append: '">video</a>' %}
               {% endif %}
               {% if post.code %}
-              <a href="{{post.code}}">code</a> /
+                {% if link_list != "" %}{% assign link_list = link_list | append: " / " %}{% endif %}
+                {% assign link_list = link_list | append: '<a href="' | append: post.code | append: '">code</a>' %}
               {% endif %}
               {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> /
+                {% if link_list != "" %}{% assign link_list = link_list | append: " / " %}{% endif %}
+                {% assign link_list = link_list | append: '<a href="' | append: post.poster | append: '">poster</a>' %}
               {% endif %}
               {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> /
+                {% if link_list != "" %}{% assign link_list = link_list | append: " / " %}{% endif %}
+                {% assign link_list = link_list | append: '<a href="' | append: post.slides | append: '">slides</a>' %}
               {% endif %}
               {% if post.youtube %}
-              <a href="{{post.youtube}}">youtube</a> /
+                {% if link_list != "" %}{% assign link_list = link_list | append: " / " %}{% endif %}
+                {% assign link_list = link_list | append: '<a href="' | append: post.youtube | append: '">youtube</a>' %}
               {% endif %}
+              {{ link_list }}
               <p></p>
               {{ post.excerpt }}
             </td>

@@ -6,10 +6,29 @@
 name: Seonghun Oh
 
 # Short bio or description (displayed in the header)
-# description: the profile of an engineer, researcher and software developer
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: images/profile.png
+
+# Contact information
+email: rendell@yonsei.ac.kr
+
+# Keywords used for manual SEO meta tags
+keywords:
+  - Seonghun Oh
+  - Oh Seonghun
+  - Seonghun Yonsei University
+  - Seonghun Oh Yonsei University
+  - Seonghun Oh Yonsei
+
+# Social profiles used for schema.org data
+social_links:
+  - platform: GitHub
+    url: https://github.com/seonghunn
+  - platform: LinkedIn
+    url: https://www.linkedin.com/in/seonghun-oh-89b005261/
+  - platform: Website
+    url: https://seonghunn.github.io
 
 #
 # Flags below are optional
@@ -38,6 +57,8 @@ disqus:
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
+# Optional: paste Google Search Console verification token
+google_site_verification:
 # excerpt_separator: <!--more-->
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
@@ -73,7 +94,7 @@ kramdown:
 
 # Set the Sass partials directory, as we're using @imports
 sass:
-  style: :compressed # You might prefer to minify using :compressed
+  style: compressed # You might prefer to minify using :compressed
 
 # Use the following plug-ins
 plugins:
