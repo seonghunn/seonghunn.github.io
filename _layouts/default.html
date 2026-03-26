@@ -91,18 +91,17 @@
               <h1>
                 Seonghun Oh
               </h1>
-              <p>
-                I am an undergraduate student at Yonsei University, majoring in Electrical and Electronics Engineering.
-              </p>
-              <p>
-                During my undergraduate studies, I worked as a research intern at UC San Diego, Seoul National University, and NAVER AI Lab.
-                My research interests lie in 3D Computer Vision and Computer Graphics.
-              </p>
-              <p><b>
-                I am looking for research internship opportunities beginning in 2026.
-              </b><br>Feel free to contact me!</p>
+<p>
+  I am an incoming M.S. student in Robotics at the Robotics Institute, Carnegie Mellon University, and currently a Research Engineer at <a href="https://holiday-robotics.com/">Holiday Robotics</a>.
+</p>
+<p>
+  My research interests broadly lie in Computer Graphics, 3D Computer Vision, and Embodied AI, particularly at the intersection of geometry processing, neural shape representations, and simulation.
+</p>
+<p>
+  I received my B.S. in Electrical and Electronics Engineering from Yonsei University. During my undergraduate studies, I was fortunate to work with <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a> at UC San Diego and <a href="https://3d.snu.ac.kr/">Young Min Kim</a> at Seoul National University, and to work as a Research Scientist Intern at NAVER AI Lab, where I was advised by <a href="https://wityworks.com/">Jin-Hwa Kim</a>.
+</p>
               <p style="text-align:center">
-                <a href="mailto:rendell@yonsei.ac.kr">Email</a> &nbsp;/&nbsp;
+                <a href="mailto:seohun043@gmail.com">Email</a> &nbsp;/&nbsp;
                 <a href="https://github.com/seonghunn">GitHub</a> &nbsp;/&nbsp;
                 <a href="https://www.linkedin.com/in/seonghun-oh-89b005261/"> LinkedIn </a>
               </p>
@@ -146,7 +145,11 @@
               {% endif %}
               {% if post.code %}
                 {% if link_list != "" %}{% assign link_list = link_list | append: " / " %}{% endif %}
-                {% assign link_list = link_list | append: '<a href="' | append: post.code | append: '">code</a>' %}
+                {% assign code_html = '<a href="' | append: post.code | append: '">code</a>' %}
+                {% if post.code_badge %}
+                  {% assign code_html = code_html | append: '&nbsp;<a href="' | append: post.code | append: '"><img src="' | append: post.code_badge | append: '" alt="GitHub stars" style="vertical-align:middle; height:20px;"></a>' %}
+                {% endif %}
+                {% assign link_list = link_list | append: code_html %}
               {% endif %}
               {% if post.poster %}
                 {% if link_list != "" %}{% assign link_list = link_list | append: " / " %}{% endif %}
@@ -175,21 +178,28 @@
         <br>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
-            <td style="padding:2.5%;width:75%;vertical-align:middle">
+            <td style="padding:1.75%;width:75%;vertical-align:middle">
+              <h3 style="margin:0;">Research Engineer</h3>
+              <div><a class="subtle-link" href="https://holiday-robotics.com/">Holiday Robotics</a>, Simulation Team</div>
+            </td>
+            <td style="padding:2.5%;width:25%;vertical-align:middle;text-align:right;white-space:nowrap;">2026.03 – Present</td>
+          </tr>
+          <tr>
+            <td style="padding:1.75%;width:75%;vertical-align:middle">
               <h3 style="margin:0;">Research Scientist Intern</h3>
-              <div><a class="subtle-link" href="https://naver-career.gitbook.io/en/positions/ai-ml/generation-research">Generation Research</a>, <a class="subtle-link" href="https://naver-career.gitbook.io/en/teams/clova-cic/ai-lab">NAVER AI Lab</a> (Advisor: <a href="https://wityworks.com/">Jin-Hwa Kim</a>)</div>
+              <div><a class="subtle-link" href="https://naver-career.gitbook.io/en/teams/clova-cic/ai-lab">NAVER AI Lab</a>, <a class="subtle-link" href="https://naver-career.gitbook.io/en/positions/ai-ml/generation-research">Generation Research</a> (Advisor: <a href="https://wityworks.com/">Jin-Hwa Kim</a>)</div>
             </td>
             <td style="padding:2.5%;width:25%;vertical-align:middle;text-align:right;white-space:nowrap;">2025.03 – 2025.09</td>
           </tr>
           <tr>
-            <td style="padding:2.5%;width:75%;vertical-align:middle">
+            <td style="padding:1.75%;width:75%;vertical-align:middle">
               <h3 style="margin:0;">Research Intern</h3>
               <div>Seoul National University (Advisor: <a href="https://3d.snu.ac.kr/">Young-Min Kim</a>)</div>
             </td>
             <td style="padding:2.5%;width:25%;vertical-align:middle;text-align:right;white-space:nowrap;">2024.04 – 2024.10</td>
           </tr>
           <tr>
-            <td style="padding:2.5%;width:75%;vertical-align:middle">
+            <td style="padding:1.75%;width:75%;vertical-align:middle">
               <h3 style="margin:0;">Research Intern</h3>
               <div>University of California, San Diego (Advisor: <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a>)</div>
             </td>
@@ -210,7 +220,8 @@
             <td style="padding:2.5%;width:75%;vertical-align:middle">
               <h3>Yonsei University</h3>
               <p>B.S. in Electrical and Electronics Engineering</p>
-              <p>2020.03 – Present</p>
+              <p>2020.03 – 2026.02</p>
+              <p>Rank: 2/122</p>
             </td>
           </tr>
           <tr>

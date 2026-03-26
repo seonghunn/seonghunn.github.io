@@ -9,4 +9,5 @@ venue: "Computer Graphics Forum (Pacific Graphics) 2025"
 paper: https://arxiv.org/abs/2509.05595
 website: https://seonghunn.github.io/pamo/
 code: https://github.com/SarahWeiii/pamo
+code_badge: https://img.shields.io/github/stars/SarahWeiii/pamo?style=social
 ---

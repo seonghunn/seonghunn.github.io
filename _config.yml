@@ -112,3 +112,9 @@ exclude:
   - todo.txt
   - _temp/index.html
   - _temp/
+
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - .bundle
