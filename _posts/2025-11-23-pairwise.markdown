@@ -6,5 +6,6 @@ image: /images/tetrasdf.jpg
 categories: research
 authors: "<strong>Seonghun Oh</strong>, Youngjung Uh, Jin-Hwa Kim"
 venue: "European Conference on Computer Vision (ECCV) 2026"
+website: https://seonghunn.github.io/tetrasdf/
 paper: https://arxiv.org/abs/2511.16273
 ---
