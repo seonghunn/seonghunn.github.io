@@ -5,7 +5,7 @@ date:   2025-11-23 00:00:00 +00:00
 image: /images/tetrasdf.jpg
 categories: research
 authors: "<strong>Seonghun Oh</strong>, Youngjung Uh, Jin-Hwa Kim"
-venue: "European Conference on Computer Vision (ECCV) 2026"
+venue: 'ECCV 2026 <span style="color:#c0392b;">(Oral)</span>'
 website: https://seonghunn.github.io/tetrasdf/
 paper: https://arxiv.org/abs/2511.16273
 ---
