@@ -8,4 +8,6 @@ authors: "<strong>Seonghun Oh</strong>, Youngjung Uh, Jin-Hwa Kim"
 venue: 'ECCV 2026 <span style="color:#c0392b;">(Oral)</span>'
 website: https://seonghunn.github.io/tetrasdf/
 paper: https://arxiv.org/abs/2511.16273
+code: https://github.com/naver-ai/TetraSDF
+code_badge: https://img.shields.io/github/stars/naver-ai/TetraSDF?style=social
 ---
