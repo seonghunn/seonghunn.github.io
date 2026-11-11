@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "HolidayFactory 1.0: Simulating, Generating, and Evaluating Industrial Robot Tasks"
+date:   2026-11-10 00:00:00 +00:00
+image: /images/holidayfactory.jpg
+categories: research
+authors: "Holiday Robotics; <strong>Core contributor</strong>"
+venue: "Technical Report"
+paper: https://arxiv.org/abs/2611.11789
+---
