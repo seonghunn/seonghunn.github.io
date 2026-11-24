@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "DiffSimp: Differentiable Mesh Simplification for Gradient-Based Low-Poly Modeling"
+date:   2026-11-24 00:00:00 +00:00
+image: /images/diffsimp.jpg
+categories: research
+authors: "<strong>Seonghun Oh</strong>"
+venue: "arXiv 2026"
+paper: https://arxiv.org/abs/2611.31018
+---
